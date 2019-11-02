@@ -1,0 +1,154 @@
+/* COULEUR COLOR ET BG */
+.colorViolet {
+    color: rgb(69, 49, 114);
+}
+.colorGris {
+    color: #CBCBCB;
+}
+.bgColorViolet {
+    background-color: rgb(69, 49, 114);
+}
+.colorJaune {
+    color: yellow;
+}
+.bgColorYellow {
+    background-color: yellow;
+}
+.bgColorGris {
+    background-color: #CBCBCB!important;
+}
+.bgTransparent {
+    background-color: rgba(1, 1, 1, 0.1)
+}
+.borderViolet {
+    background-color: rgb(195, 193, 197);
+    border: none;
+}
+
+
+
+
+/* CSS DE BASE POUR TOUTE LES PAGES */
+main {
+    width: 80%;
+    margin: auto;
+    background-color: rgb(69, 49, 114);
+    font-family: 'Oswald', sans-serif;
+
+}
+body {
+    width: 100%;
+    margin: auto;
+    background-color: rgb(69, 49, 114)!important;
+    font-family: 'Oswald', sans-serif!important;
+}
+
+html {
+    width: 100%;
+    margin: auto;
+    background-color: rgb(69, 49, 114);
+    font-family: 'Oswald', sans-serif;
+    
+}
+footer {
+    width: 80%;
+    background-color: rgb(195, 193, 197);
+    font-family: 'Oswald', sans-serif !important;
+}
+
+h2, h1 {
+    color: rgb(69, 49, 114);
+    text-align: center;
+    padding-top: 1rem;
+}
+h3 {
+    color: #453172;
+    text-align: center;
+}
+/* css pour les couleurs des liens dans la barre de navigation */
+.lienNav {
+    color: black !important;
+}
+/* forcer le css pour les bouton et sont hover */
+.btnCouleur {
+    background-color: #453172!important;
+    color: yellow!important;
+}
+.btnCouleur:hover {
+    background-color: white!important;
+    color: #453172!important;
+}
+/* forcer pour fond des articles et des joueurs */
+.CouleurArticle {
+    background-color: #453172 !important;
+}
+/* CSS PROBLEME DES IMAGE RENCONTRE PROCHAINE SUR APPLE */
+.imgRencontre {
+    max-width: 100%;
+    max-height: 50%;
+}
+/* HEADER */
+.barHeader {
+    width: 80%;
+    margin: auto;
+    font-size: 1.5rem;
+}
+/* LOGO DU CLUB QUI DEPASSE DE SONT PARENT */
+.logoNav {
+    position: relative;
+    z-index: 1;
+}
+.divNav {
+    margin-top: -5.5rem;
+    justify-content: center;
+}
+#carouselExampleCaptions {
+    margin-top: -5rem;
+}
+.btnMenu {
+    margin-top: -10rem;
+}
+.premierSection {
+    margin-top: -3.5rem!important;
+}
+
+/* -------------------------------------------------- */
+
+
+/* COULEUR DES SECTIONS */
+.contour {
+    background-color: rgb(195, 193, 197);
+    box-shadow: 3px -5px 30px black;
+    margin-top: 3rem;
+    border-radius: 6px 6px;
+}
+/* CONTOUR POUR LE CAROUSEL POUR GARDER LE LOGO DESSUS */
+.contour1 {
+    background-color: rgb(195, 193, 197);
+    box-shadow: 1px -5px 30px black;
+    border-radius: 6px 6px;
+}
+
+
+/* CSS POUR QUE LES PHOTOS DES JOUEURS SOIS A LA MEME TAILLE */
+.imgJoueur {
+    max-width: 100%;
+    max-height: 60%;
+    min-height: 60%;
+}
+.imgArticle {
+    max-width: 100%;
+    height: 100%;
+}
+
+/* CSS POUR EVITER LE DEBORDEMENT DU TEXTE DANS LES TABLEAUX*/
+table td {
+    max-width: 0;
+    text-align: center;
+}
+.tableau {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 0;
+    text-align: center;
+}
