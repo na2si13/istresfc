@@ -12,11 +12,21 @@ class User extends \TCG\Voyager\Models\User
     use Notifiable;
      use VoyagerUser;
 
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
+
+    private $attribute = [
+
+    ];
+
+    public function setSettingsAttribute($value) { 
+        $this->attributes['settings'] = $value ? $value->toJson() : null; 
+    }
+
     protected $fillable = [
         'name', 'email', 'password',
     ];
