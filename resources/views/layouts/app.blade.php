@@ -140,7 +140,7 @@
 <!-- IMAGE QUI MENE VERS LE COTE ADMINISTRATEUR -->
 <a class="mx-auto" href="{{route('admin')}}"><img src="./img/ballon.png" alt=""></a>
 
-  </footer>
+</footer>
   <p class="text-center text-light mx-auto col-12 pt-3">Site Réalisé par <a class="text-light" href="https://www.astor.website/">Astor.website</a></p>
   <!-- SCRIPT POUR LES ANIMATION AOS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
