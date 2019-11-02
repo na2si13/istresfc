@@ -144,15 +144,49 @@
                             <h2 class="colorViolet">Joueurs</h2>
                             <hr class="bgColorYellow col-4 mb-3">
                             <div class="col-12 row mx-auto justify-content-around">
-                            @foreach($joueurs as $joueur)
+                            @foreach($attaquants as $attaquant)
                               <div class="card bgColorViolet colorJaune CouleurArticle col-lg-2 col-md-4 col-10 mt-4 ml-2">
-                                  <img src="storage/{{ $joueur->photo }}" class="card-img mt-3 imgJoueur" alt="...">
-                                  <p class="m-0">{{ $joueur->nom }}<br>
-                                  {{ $joueur->prenom }}<hr class="m-0 bgColorYellow">
-                                  {{ $joueur->poste}}<br>
-                                  {{ $joueur->annee }}</p>
+                                  <img src="storage/{{ $attaquant->photo }}" class="img-fluid card-img mt-3 imgJoueur" alt="...">
+                                  <p class="m-0">{{ $attaquant->nom }}<br>
+                                  {{ $attaquant->prenom }}<hr class="m-0 bgColorYellow">
+                                  {{ $attaquant->poste}}<br>
+                                  {{ $attaquant->annee }}</p>
                                 </div>
                               @endforeach
+                              </div>
+                              <div class="col-12 row mx-auto justify-content-around"> 
+                             @foreach($defenseurs as $defenseur)
+                              <div class="card bgColorViolet colorJaune CouleurArticle col-lg-2 col-md-4 col-10 mt-4 ml-2">
+                                  <img src="storage/{{ $defenseur->photo }}" class="card-img mt-3 imgJoueur" alt="...">
+                                  <p class="m-0">{{ $defenseur->nom }}<br>
+                                  {{ $defenseur->prenom }}<hr class="m-0 bgColorYellow">
+                                  {{ $defenseur->poste}}<br>
+                                  {{ $defenseur->annee }}</p>
+                                </div>
+                              @endforeach
+                              </div>
+                              <div class="col-12 row mx-auto justify-content-around">   
+                              @foreach($millieux as $millieu)
+                              <div class="card bgColorViolet colorJaune CouleurArticle col-lg-2 col-md-4 col-10 mt-4 ml-2">
+                                  <img src="storage/{{ $millieu->photo }}" class="card-img mt-3 imgJoueur" alt="...">
+                                  <p class="m-0">{{ $millieu->nom }}<br>
+                                  {{ $millieu->prenom }}<hr class="m-0 bgColorYellow">
+                                  {{ $millieu->poste}}<br>
+                                  {{ $millieu->annee }}</p>
+                                </div>
+                              @endforeach
+                              </div>
+                              <div class="col-12 row mx-auto justify-content-around">                              
+                                @foreach($gardiens as $gardien)
+                              <div class="card bgColorViolet colorJaune CouleurArticle col-lg-2 col-md-4 col-10 mt-4 ml-2">
+                                  <img src="storage/{{ $gardien->photo }}" class="card-img mt-3 imgJoueur" alt="...">
+                                  <p class="m-0">{{ $gardien->nom }}<br>
+                                  {{ $gardien->prenom }}<hr class="m-0 bgColorYellow">
+                                  {{ $gardien->poste}}<br>
+                                  {{ $gardien->annee }}</p>
+                                </div>
+                              @endforeach
+                              </div>
                       </div>
                   </div>
                   <!-- ---------------------------------->
