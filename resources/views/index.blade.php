@@ -444,7 +444,7 @@
 
 <!-- ----------------------------------------------------------- -->
             <section class="text-center col-sm-2 col-md-12 col-lg-4 row mx-auto sectionLogo">
-                <img src="./img/logoIstresPlastique.png" class="col-lg-6 col-sm-8 col-md-6 mx-auto p-0" alt="">
+                <img src="./img/logoIstresPlastiqueFooter.png" class="col-lg-6 col-sm-8 col-md-6 mx-auto p-0" alt="">
             </section>
 <!-- --------------------------------- -->
 <a class="mx-auto" href="{{route('admin')}}"><img src="./img/ballon.png" alt=""></a>
