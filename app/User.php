@@ -7,10 +7,10 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use TCG\Voyager\Traits\VoyagerUser;
 use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable
+class User extends \TCG\Voyager\Models\User
 {
     use Notifiable;
-    use VoyagerUser;
+     use VoyagerUser;
 
     /**
      * The attributes that are mass assignable.
