@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  ven. 25 oct. 2019 à 23:17
+-- Généré le :  Dim 03 nov. 2019 à 21:22
 -- Version du serveur :  5.7.24
 -- Version de PHP :  7.2.19
 
@@ -31,7 +31,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `articles` (
   `id` int(10) UNSIGNED NOT NULL,
   `titre` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `texte` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `texte` longtext COLLATE utf8mb4_unicode_ci,
   `photo` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
@@ -44,15 +44,15 @@ CREATE TABLE `articles` (
 
 INSERT INTO `articles` (`id`, `titre`, `texte`, `photo`, `created_at`, `updated_at`, `equipe`) VALUES
 (1, 'U19', 'ON A REUSSI', 'articles\\October2019\\bJw58lmBx11LcDVNXfvJ.jpg', '2019-10-24 19:50:00', '2019-10-25 18:49:08', 'U19_N'),
-(2, 'N3', 'krjevnclecn dncl nclm ,ldsc kdf mdls, c', 'articles\\October2019\\3sgXZtgyBr0haqFpNVVs.jpg', '2019-10-25 14:30:00', '2019-10-25 18:48:57', 'National_3'),
+(2, 'Premier Articles N3', 'Grâce à sa victoire (7-1) face au FC Martigues dimanche, le Istres FC est sûr de terminer 2e du classement de U19 R1 et donc de jouer au niveau National la saison prochaine car le champion, l\'AS Monaco, possède déjà une équipe à ce niveau et ne peut donc pas monter. Patrick Lafforgue, entraîneur des violets, est fier de ses joueurs.', 'articles\\November2019\\jYtlxiIg54Wjlazx42Ux.jpg', '2019-10-25 14:30:00', '2019-11-01 14:00:03', 'National_3'),
 (3, 'U18', 'LDFDNCDL NDF', 'articles\\October2019\\wPZ2grEOZN7ci5xki6gv.jpg', '2019-10-25 18:48:44', '2019-10-25 18:48:44', 'U18_R2'),
 (4, 'U18 R2', 'KFDBVJKDSNVJKN', 'articles\\October2019\\RcgSz0Lqaqi8GNis0C8Q.png', '2019-10-25 18:49:28', '2019-10-25 18:49:28', 'U18_R2'),
 (5, 'U17 N', 'KDJNCDKSJNV VDN', 'articles\\October2019\\g75EqyuxoWZBxuSvSPN6.jpg', '2019-10-25 18:49:43', '2019-10-25 18:49:43', 'U17_N'),
 (6, 'U16 R2', 'KDJBCDJSNVNKF', 'articles\\October2019\\EIDEw662UktGDuVSAXkF.png', '2019-10-25 18:49:59', '2019-10-25 18:49:59', 'U16_R2'),
-(7, 'RESERVE', 'JN JKNJKKJN', 'articles\\October2019\\ARWuRc2TcrkHrFsDXCtK.png', '2019-10-25 18:50:24', '2019-10-25 18:50:24', 'Reserve_D3'),
 (8, 'U16 D1', 'DF KJDSN JKFD SCLKD F', 'articles\\October2019\\Do8u9ntyEiJUTFiX72dI.jpg', '2019-10-25 18:51:04', '2019-10-25 18:51:04', 'U16_D1'),
-(9, 'U15 D1', 'FLKNV FDJKVSNCLKDF', 'articles\\October2019\\Hxgnixeqx1mMprEWY5kn.png', '2019-10-25 18:51:21', '2019-10-25 18:51:21', 'U15_D1'),
-(10, 'U14 D1', 'RNCLEZNCVJKCZENDJCDF', 'articles\\October2019\\X7zzsL0g1BrNtAk0wMiX.jpg', '2019-10-25 18:51:39', '2019-10-25 18:51:39', 'U14_D1');
+(9, 'U15 D1', 'FLKNV FDJKVSNCLKDF', 'articles\\October2019\\IDQW8TMV5SnAhLFzBCzl.jpg', '2019-10-25 18:51:00', '2019-10-28 19:10:39', 'U15_D1'),
+(10, 'U14 D1', 'RNCLEZNCVJKCZENDJCDF', 'articles\\October2019\\X7zzsL0g1BrNtAk0wMiX.jpg', '2019-10-25 18:51:39', '2019-10-25 18:51:39', 'U14_D1'),
+(11, 'test', 'test', 'articles\\October2019\\twqtX7oj4X5Lm8DUvAfo.jpg', '2019-10-29 17:17:04', '2019-10-29 17:17:04', 'National_3');
 
 -- --------------------------------------------------------
 
@@ -111,7 +111,7 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (87, 21, 'photo', 'image', 'Photo', 0, 1, 1, 1, 1, 1, '{}', 6),
 (88, 22, 'id', 'number', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (89, 22, 'titre', 'text', 'Titre', 0, 1, 1, 1, 1, 1, '{}', 2),
-(90, 22, 'texte', 'text', 'Texte', 0, 1, 1, 1, 1, 1, '{}', 3),
+(90, 22, 'texte', 'text_area', 'Texte', 0, 1, 1, 1, 1, 1, '{}', 3),
 (91, 22, 'photo', 'image', 'Photo', 0, 1, 1, 1, 1, 1, '{}', 4),
 (92, 22, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 5),
 (93, 22, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 6),
@@ -125,8 +125,8 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (101, 23, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 4),
 (102, 21, 'joueur_hasone_equipe_relationship', 'relationship', 'equipes', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Equipe\",\"table\":\"equipes\",\"type\":\"belongsTo\",\"column\":\"equipe\",\"key\":\"nom\",\"label\":\"nom\",\"pivot_table\":\"articles\",\"pivot\":\"0\",\"taggable\":\"0\"}', 7),
 (103, 20, 'equipe_belongsto_joueur_relationship', 'relationship', 'joueurs', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Joueur\",\"table\":\"joueurs\",\"type\":\"hasMany\",\"column\":\"equipe\",\"key\":\"nom\",\"label\":\"nom\",\"pivot_table\":\"articles\",\"pivot\":\"0\",\"taggable\":\"0\"}', 5),
-(104, 20, 'equipe_hasone_entraineur_relationship', 'relationship', 'entraineurs', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Entraineur\",\"table\":\"entraineurs\",\"type\":\"belongsTo\",\"column\":\"entraineur\",\"key\":\"entraineur\",\"label\":\"entraineur\",\"pivot_table\":\"articles\",\"pivot\":\"0\",\"taggable\":\"0\"}', 6),
-(105, 23, 'entraineur_hasone_equipe_relationship', 'relationship', 'equipes', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Equipe\",\"table\":\"equipes\",\"type\":\"belongsTo\",\"column\":\"id\",\"key\":\"nom\",\"label\":\"nom\",\"pivot_table\":\"articles\",\"pivot\":\"0\",\"taggable\":\"0\"}', 5),
+(104, 20, 'equipe_hasone_entraineur_relationship', 'relationship', 'entraineurs', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Entraineur\",\"table\":\"entraineurs\",\"type\":\"belongsTo\",\"column\":\"entraineur\",\"key\":\"nom\",\"label\":\"nom\",\"pivot_table\":\"articles\",\"pivot\":\"0\",\"taggable\":\"0\"}', 6),
+(105, 23, 'entraineur_hasone_equipe_relationship', 'relationship', 'equipes', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Equipe\",\"table\":\"equipes\",\"type\":\"belongsTo\",\"column\":\"equipe\",\"key\":\"nom\",\"label\":\"nom\",\"pivot_table\":\"articles\",\"pivot\":\"0\",\"taggable\":\"0\"}', 5),
 (106, 24, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (108, 24, 'poste_hasmany_joueur_relationship', 'relationship', 'joueurs', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Joueur\",\"table\":\"joueurs\",\"type\":\"hasMany\",\"column\":\"poste\",\"key\":\"nom\",\"label\":\"nom\",\"pivot_table\":\"articles\",\"pivot\":\"0\",\"taggable\":\"0\"}', 3),
 (109, 21, 'joueur_hasone_poste_relationship', 'relationship', 'postes', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Poste\",\"table\":\"postes\",\"type\":\"belongsTo\",\"column\":\"poste\",\"key\":\"nom\",\"label\":\"nom\",\"pivot_table\":\"articles\",\"pivot\":\"0\",\"taggable\":\"0\"}', 8),
@@ -139,7 +139,21 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (117, 20, 'joueur', 'text', 'Joueur', 0, 1, 1, 1, 1, 1, '{}', 5),
 (118, 20, 'entraineur', 'text', 'Entraineur', 0, 1, 1, 1, 1, 1, '{}', 6),
 (119, 21, 'equipe', 'text', 'Equipe', 0, 1, 1, 1, 1, 1, '{}', 9),
-(120, 22, 'equipe', 'text', 'Equipe', 0, 1, 1, 1, 1, 1, '{}', 7);
+(120, 22, 'equipe', 'text', 'Equipe', 0, 1, 1, 1, 1, 1, '{}', 7),
+(121, 23, 'equipe', 'text', 'Equipe', 0, 1, 1, 1, 1, 1, '{}', 5),
+(122, 23, 'photo', 'image', 'Photo', 0, 1, 1, 1, 1, 1, '{}', 6),
+(123, 20, 'photo', 'image', 'Photo', 0, 1, 1, 1, 1, 1, '{}', 7),
+(124, 23, 'prenom', 'text', 'Prenom', 0, 1, 1, 1, 1, 1, '{}', 7),
+(125, 29, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(127, 29, 'logodom', 'image', 'Logodom', 0, 1, 1, 1, 1, 1, '{}', 3),
+(129, 29, 'logoext', 'image', 'Logoext', 0, 1, 1, 1, 1, 1, '{}', 5),
+(130, 29, 'date', 'text', 'Date', 0, 1, 1, 1, 1, 1, '{}', 6),
+(131, 29, 'heure', 'text', 'Heure', 0, 1, 1, 1, 1, 1, '{}', 7),
+(132, 29, 'stade', 'text', 'Stade', 0, 1, 1, 1, 1, 1, '{}', 8),
+(133, 29, 'ville', 'text', 'Ville', 0, 1, 1, 1, 1, 1, '{}', 9),
+(134, 29, 'codepostal', 'text', 'Codepostal', 0, 1, 1, 1, 1, 1, '{}', 10),
+(135, 29, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 11),
+(136, 29, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 12);
 
 -- --------------------------------------------------------
 
@@ -174,11 +188,12 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (2, 'menus', 'menus', 'Menu', 'Menus', 'voyager-list', 'TCG\\Voyager\\Models\\Menu', NULL, '', '', 1, 0, NULL, '2019-10-24 00:56:47', '2019-10-24 00:56:47'),
 (3, 'roles', 'roles', 'Role', 'Roles', 'voyager-lock', 'TCG\\Voyager\\Models\\Role', NULL, '', '', 1, 0, NULL, '2019-10-24 00:56:47', '2019-10-24 00:56:47'),
 (10, 'entraineur', 'entraineur', 'Entraineur', 'Entraineurs', 'voyager-star-two', 'App\\Entraineur', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2019-10-24 17:29:10', '2019-10-24 17:29:10'),
-(20, 'equipes', 'equipes', 'Equipe', 'Equipes', 'voyager-people', 'App\\Equipe', NULL, NULL, 'Les Equipes', 1, 0, '{\"order_column\":\"nom\",\"order_display_column\":\"nom\",\"order_direction\":\"asc\",\"default_search_key\":\"nom\",\"scope\":null}', '2019-10-24 19:27:45', '2019-10-25 18:44:52'),
+(20, 'equipes', 'equipes', 'Equipe', 'Equipes', 'voyager-people', 'App\\Equipe', NULL, NULL, 'Les Equipes', 1, 0, '{\"order_column\":\"nom\",\"order_display_column\":\"nom\",\"order_direction\":\"asc\",\"default_search_key\":\"nom\",\"scope\":null}', '2019-10-24 19:27:45', '2019-10-28 19:12:58'),
 (21, 'joueurs', 'joueurs', 'Joueur', 'Joueurs', 'voyager-person', 'App\\Joueur', NULL, NULL, 'Les Joueurs', 1, 0, '{\"order_column\":\"nom\",\"order_display_column\":\"nom\",\"order_direction\":\"asc\",\"default_search_key\":\"nom\",\"scope\":null}', '2019-10-24 19:32:09', '2019-10-25 18:39:59'),
-(22, 'articles', 'articles', 'Article', 'Articles', 'voyager-images', 'App\\Article', NULL, NULL, 'Les Articles', 1, 0, '{\"order_column\":\"titre\",\"order_display_column\":\"titre\",\"order_direction\":\"asc\",\"default_search_key\":\"titre\",\"scope\":null}', '2019-10-24 19:34:49', '2019-10-25 18:44:32'),
-(23, 'entraineurs', 'entraineurs', 'Entraineur', 'Entraineurs', 'voyager-star', 'App\\Entraineur', NULL, NULL, 'Les Entraineurs', 1, 0, '{\"order_column\":\"id\",\"order_display_column\":\"nom\",\"order_direction\":\"asc\",\"default_search_key\":\"nom\",\"scope\":null}', '2019-10-24 20:33:33', '2019-10-25 13:09:00'),
-(24, 'postes', 'postes', 'Poste', 'Postes', 'voyager-list', 'App\\Poste', NULL, NULL, 'Les Postes', 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":\"nom\",\"scope\":null}', '2019-10-25 12:31:00', '2019-10-25 18:38:06');
+(22, 'articles', 'articles', 'Article', 'Articles', 'voyager-images', 'App\\Article', NULL, NULL, 'Les Articles', 1, 0, '{\"order_column\":\"titre\",\"order_display_column\":\"titre\",\"order_direction\":\"asc\",\"default_search_key\":\"titre\",\"scope\":null}', '2019-10-24 19:34:49', '2019-10-31 17:26:49'),
+(23, 'entraineurs', 'entraineurs', 'Entraineur', 'Entraineurs', 'voyager-star', 'App\\Entraineur', NULL, NULL, 'Les Entraineurs', 1, 0, '{\"order_column\":\"id\",\"order_display_column\":\"nom\",\"order_direction\":\"asc\",\"default_search_key\":\"nom\",\"scope\":null}', '2019-10-24 20:33:33', '2019-10-30 21:39:23'),
+(24, 'postes', 'postes', 'Poste', 'Postes', 'voyager-list', 'App\\Poste', NULL, NULL, 'Les Postes', 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":\"nom\",\"scope\":null}', '2019-10-25 12:31:00', '2019-10-25 18:38:06'),
+(29, 'prochrencontres', 'prochrencontres', 'Prochrencontre', 'Prochrencontres', NULL, 'App\\Prochrencontre', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2019-10-31 15:58:07', '2019-10-31 16:00:59');
 
 -- --------------------------------------------------------
 
@@ -188,17 +203,21 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 
 CREATE TABLE `entraineurs` (
   `id` int(10) UNSIGNED NOT NULL,
-  `entraineur` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `nom` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `equipe` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `photo` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `prenom` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `entraineurs`
 --
 
-INSERT INTO `entraineurs` (`id`, `entraineur`, `created_at`, `updated_at`) VALUES
-(1, 'Tom Jamon', '2019-10-24 20:33:45', '2019-10-24 20:33:45');
+INSERT INTO `entraineurs` (`id`, `nom`, `created_at`, `updated_at`, `equipe`, `photo`, `prenom`) VALUES
+(1, 'Frédéric CRAVERO', '2019-10-24 20:33:00', '2019-10-31 14:45:09', 'National_3', 'entraineurs\\October2019\\nkJgbwdce9ZO80scfEpS.png', NULL),
+(3, 'Stéphane PUGGIONI', '2019-10-27 15:30:00', '2019-10-31 14:25:27', 'National_3', 'entraineurs\\October2019\\X3Ii39U5a9lAndteHPCB.png', NULL);
 
 -- --------------------------------------------------------
 
@@ -212,23 +231,25 @@ CREATE TABLE `equipes` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `joueur` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `entraineur` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `entraineur` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `photo` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `niveau` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `equipes`
 --
 
-INSERT INTO `equipes` (`id`, `nom`, `created_at`, `updated_at`, `joueur`, `entraineur`) VALUES
-(1, 'National_3', '2019-10-24 19:47:00', '2019-10-25 18:42:40', NULL, 'Tom Jamon'),
-(2, 'U19_N', '2019-10-24 19:52:00', '2019-10-25 12:56:48', NULL, NULL),
-(3, 'U18_R2', '2019-10-24 19:52:00', '2019-10-25 12:56:23', NULL, NULL),
-(4, 'U17_N', '2019-10-24 19:52:00', '2019-10-25 12:55:26', NULL, NULL),
-(5, 'U16_R2', '2019-10-25 12:44:00', '2019-10-25 12:56:10', NULL, NULL),
-(6, 'Reserve_D3', '2019-10-25 12:57:13', '2019-10-25 12:57:13', NULL, NULL),
-(7, 'U16_D1', '2019-10-25 12:57:43', '2019-10-25 12:57:43', NULL, NULL),
-(8, 'U15_D1', '2019-10-25 12:58:05', '2019-10-25 12:58:05', NULL, NULL),
-(9, 'U14_D1', '2019-10-25 12:58:13', '2019-10-25 12:58:13', NULL, NULL);
+INSERT INTO `equipes` (`id`, `nom`, `created_at`, `updated_at`, `joueur`, `entraineur`, `photo`, `niveau`) VALUES
+(1, 'National_3', '2019-10-24 19:47:00', '2019-10-30 21:49:30', NULL, 'Tom Jamon', 'equipes\\October2019\\OSjnTxeZrx9w7wYxTxyh.jpg', NULL),
+(2, 'U19_N', '2019-10-24 19:52:00', '2019-10-27 15:04:58', NULL, 'jOSEPH ASTOR', NULL, NULL),
+(3, 'U18_R2', '2019-10-24 19:52:00', '2019-10-25 12:56:23', NULL, NULL, NULL, NULL),
+(4, 'U17_N', '2019-10-24 19:52:00', '2019-10-25 12:55:26', NULL, NULL, NULL, NULL),
+(5, 'U16_R2', '2019-10-25 12:44:00', '2019-10-25 12:56:10', NULL, NULL, NULL, NULL),
+(6, 'Reserve_D3', '2019-10-25 12:57:13', '2019-10-25 12:57:13', NULL, NULL, NULL, NULL),
+(7, 'U16_D1', '2019-10-25 12:57:43', '2019-10-25 12:57:43', NULL, NULL, NULL, NULL),
+(8, 'U15_D1', '2019-10-25 12:58:05', '2019-10-25 12:58:05', NULL, NULL, NULL, NULL),
+(9, 'U14_D1', '2019-10-25 12:58:13', '2019-10-25 12:58:13', NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -268,15 +289,33 @@ CREATE TABLE `joueurs` (
 --
 
 INSERT INTO `joueurs` (`id`, `nom`, `prenom`, `annee`, `photo`, `created_at`, `updated_at`, `poste`, `equipe`) VALUES
-(2, 'DA CRUZ', 'ANAIS', 2008, 'joueurs\\October2019\\sEKEStY4H0kl7lThRUXS.jpg', '2019-10-25 13:31:00', '2019-10-25 18:42:22', 'ATTAQUANT', 'National_3'),
-(3, 'Astor', 'Joseph', 1988, 'joueurs\\October2019\\kNTQetVNiFq4yNCUkQqy.jpg', '2019-10-25 20:22:23', '2019-10-25 20:22:23', 'GARDIEN', 'U19_N'),
 (4, 'KDSCBKJDSB', 'KJBVKJZEVB', 1978, 'joueurs\\October2019\\zM6o8AvdBAcpHutZ8qIa.png', '2019-10-25 20:23:12', '2019-10-25 20:23:12', 'MILIEU', 'U18_R2'),
 (5, 'KZEJCBKJBDJZ', 'KDJCBDKZJBCDZJKB', 1988, 'joueurs\\October2019\\dus0efI1MB2cV1BqrvAS.png', '2019-10-25 20:23:39', '2019-10-25 20:23:39', 'ATTAQUANT', 'U17_N'),
 (6, 'JHDVCDBKJZEB', 'KECBKJBZEJDCBZ', 1986, 'joueurs\\October2019\\el5wYJH13W7J6S8ChtzM.png', '2019-10-25 20:23:57', '2019-10-25 20:23:57', 'GARDIEN', 'U16_R2'),
-(7, 'DJSCBLDBDJCSLJB', 'KJCBELXKCLCBE', 1989, 'joueurs\\October2019\\BduncNsEcc1oi7elARHD.png', '2019-10-25 20:24:17', '2019-10-25 20:24:17', 'MILIEU', 'Reserve_D3'),
 (8, 'KCHBDJECVBFCEJZB', 'JCBDLVBFCZE', 1976, 'joueurs\\October2019\\rZgHFr1HTfm6OhIb22qc.jpg', '2019-10-25 20:24:45', '2019-10-25 20:24:45', 'GARDIEN', 'U16_D1'),
 (9, 'kdfvb dcljvb fdjkclnds', 'jcbnldcekvnlfenz', 1999, 'joueurs\\October2019\\u5D1U9NaHYXocoHQrch9.jpg', '2019-10-25 20:27:52', '2019-10-25 20:27:52', 'GARDIEN', 'U15_D1'),
-(10, 'DKFJDDBCLJD BJSDCB', 'JCBDDLJCBSDJE', 1990, 'joueurs\\October2019\\j5zivNPQLNcSgM0rwbNJ.png', '2019-10-25 20:28:10', '2019-10-25 20:28:10', 'DEFENSEUR', 'U14_D1');
+(11, 'BRU', 'Jeremy', 1989, 'joueurs\\October2019\\9DHEYGOgwH2BkBdOFQ6x.png', '2019-10-30 13:26:00', '2019-10-30 21:14:35', 'ATTAQUANT', 'National_3'),
+(12, 'GIGLIOTTI', 'David', 1985, 'joueurs\\October2019\\j3DaK1W36nzvpB7HAzRl.png', '2019-10-30 13:44:00', '2019-10-30 21:16:44', 'ATTAQUANT', 'National_3'),
+(13, 'AKEB DAOUD', 'Yanis', 1996, 'joueurs\\October2019\\pRcLH0xngf80FDJceGfj.png', '2019-10-30 14:54:00', '2019-10-30 21:04:33', 'ATTAQUANT', 'National_3'),
+(14, 'FONDI', 'Ivan', 1983, 'joueurs\\October2019\\MjYKfClCy4kXudOYOIv3.png', '2019-10-30 15:13:00', '2019-10-30 21:16:13', 'DEFENSEUR', 'National_3'),
+(15, 'DOUHET', 'Jordan', 1994, 'joueurs\\October2019\\mo4eLRi3en87nJZaQk3k.png', '2019-10-30 19:16:00', '2019-11-03 19:33:22', 'MILIEU', 'National_3'),
+(16, 'SAEZ', 'Romain', 2001, 'joueurs\\October2019\\2iH71ayKFCawqBVVLOqc.png', '2019-10-30 19:17:00', '2019-10-30 21:18:35', 'DEFENSEUR', 'National_3'),
+(17, 'CARBONERO', 'Thomas', 2001, 'joueurs\\October2019\\kMZSgDbARGdGVSsLeK5N.png', '2019-10-30 19:17:00', '2019-10-30 21:14:50', 'DEFENSEUR', 'National_3'),
+(18, 'VANNI', 'Julien', 1986, 'joueurs\\October2019\\r3uiHeNaR2xpD6xH8a49.png', '2019-10-30 19:18:00', '2019-10-30 21:18:02', 'GARDIEN', 'National_3'),
+(19, 'MIFSUD', 'Emmanuel', 1998, 'joueurs\\October2019\\3p2j20cOU8Xe7fVXhLvw.png', '2019-10-30 19:19:00', '2019-10-30 21:19:27', 'GARDIEN', 'National_3'),
+(20, 'SIMONDI', 'Vincent', 1995, 'joueurs\\October2019\\m4rb1JHZl42UnKwFHP9C.png', '2019-10-30 19:21:00', '2019-10-30 21:18:20', 'DEFENSEUR', 'National_3'),
+(21, 'KHALK', 'Ossama', 1993, 'joueurs\\October2019\\FsH833mqJ9u5PTpgd4pF.png', '2019-10-30 19:22:00', '2019-10-30 21:17:03', 'DEFENSEUR', 'National_3'),
+(22, 'MDAHOMA', 'Omar', 1987, 'joueurs\\October2019\\MhaqyoxIli7immAMgnbI.png', '2019-10-30 19:23:00', '2019-11-03 19:34:06', 'MILIEU', 'National_3'),
+(23, 'BARADJI', 'Sekou', 1995, 'joueurs\\October2019\\MXrIXQPfkgus3ofnZUcZ.png', '2019-10-30 19:24:00', '2019-10-30 21:26:30', 'DEFENSEUR', 'National_3'),
+(24, 'DANABACHE', 'Sofiène', 1993, 'joueurs\\October2019\\GVyoysfMXwsWzcR1qVOa.png', '2019-10-30 19:25:00', '2019-11-03 19:33:13', 'MILIEU', 'National_3'),
+(25, 'NIANG', 'El Hadji Malik', 1996, 'joueurs\\October2019\\7bYxcMnvRCjKzinIGD1q.png', '2019-10-30 19:26:00', '2019-11-03 19:33:57', 'MILIEU', 'National_3'),
+(26, 'OUATTARA', 'Moussa', 1983, 'joueurs\\October2019\\KNiIQRYupYuGm213FGXM.png', '2019-10-30 19:27:00', '2019-11-03 19:33:45', 'MILIEU', 'National_3'),
+(27, 'GASMI', 'Yanis', 2002, 'joueurs\\October2019\\OLBj7f6hf5DcMsJfmasl.png', '2019-10-30 19:28:00', '2019-11-03 19:33:30', 'MILIEU', 'National_3'),
+(28, 'DIAZ', 'Kevin', 1988, 'joueurs\\October2019\\85ANVwbuKzMsqpEtt9Pe.png', '2019-10-30 19:47:00', '2019-10-30 21:15:42', 'ATTAQUANT', 'National_3'),
+(29, 'M\'CHANGAMA', 'Muhammad', 1987, 'joueurs\\October2019\\dke2VIB334u4ZXckNYQQ.png', '2019-10-30 19:48:00', '2019-10-30 21:17:47', 'ATTAQUANT', 'National_3'),
+(30, 'LEDY', 'David', 1987, 'joueurs\\October2019\\SrlbCkLL2W96FI2DT8MC.png', '2019-10-30 19:49:00', '2019-10-30 21:17:25', 'ATTAQUANT', 'National_3'),
+(31, 'dksjbckjscb', 'djh cds c', 1999, 'joueurs\\November2019\\Dk2A7HEXdtvq4jwv5LCe.jpg', '2019-11-02 15:48:47', '2019-11-02 15:48:47', 'ATTAQUANT', 'U19_N'),
+(32, 'jkfvlkner', 'vbrlkjrljkvr', 1999, 'joueurs\\November2019\\PXlvj63IyNQ9tapDXh4e.jpg', '2019-11-02 16:04:02', '2019-11-02 16:04:02', 'ATTAQUANT', 'U19_N');
 
 -- --------------------------------------------------------
 
@@ -340,7 +379,8 @@ INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class
 (22, 1, 'Joueurs', '', '_self', 'voyager-person', NULL, NULL, 16, '2019-10-24 19:32:09', '2019-10-24 19:32:09', 'voyager.joueurs.index', NULL),
 (23, 1, 'Articles', '', '_self', 'voyager-images', NULL, NULL, 17, '2019-10-24 19:34:49', '2019-10-24 19:34:49', 'voyager.articles.index', NULL),
 (24, 1, 'Entraineurs', '', '_self', 'voyager-star', NULL, NULL, 18, '2019-10-24 20:33:33', '2019-10-24 20:33:33', 'voyager.entraineurs.index', NULL),
-(25, 1, 'Postes', '', '_self', '}', NULL, NULL, 19, '2019-10-25 12:31:00', '2019-10-25 12:31:00', 'voyager.postes.index', NULL);
+(25, 1, 'Postes', '', '_self', '}', NULL, NULL, 19, '2019-10-25 12:31:00', '2019-10-25 12:31:00', 'voyager.postes.index', NULL),
+(30, 1, 'Prochrencontres', '', '_self', NULL, NULL, NULL, 20, '2019-10-31 15:58:07', '2019-10-31 15:58:07', 'voyager.prochrencontres.index', NULL);
 
 -- --------------------------------------------------------
 
@@ -473,7 +513,12 @@ INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`
 (93, 'read_postes', 'postes', '2019-10-25 12:31:00', '2019-10-25 12:31:00'),
 (94, 'edit_postes', 'postes', '2019-10-25 12:31:00', '2019-10-25 12:31:00'),
 (95, 'add_postes', 'postes', '2019-10-25 12:31:00', '2019-10-25 12:31:00'),
-(96, 'delete_postes', 'postes', '2019-10-25 12:31:00', '2019-10-25 12:31:00');
+(96, 'delete_postes', 'postes', '2019-10-25 12:31:00', '2019-10-25 12:31:00'),
+(117, 'browse_prochrencontres', 'prochrencontres', '2019-10-31 15:58:07', '2019-10-31 15:58:07'),
+(118, 'read_prochrencontres', 'prochrencontres', '2019-10-31 15:58:07', '2019-10-31 15:58:07'),
+(119, 'edit_prochrencontres', 'prochrencontres', '2019-10-31 15:58:07', '2019-10-31 15:58:07'),
+(120, 'add_prochrencontres', 'prochrencontres', '2019-10-31 15:58:07', '2019-10-31 15:58:07'),
+(121, 'delete_prochrencontres', 'prochrencontres', '2019-10-31 15:58:07', '2019-10-31 15:58:07');
 
 -- --------------------------------------------------------
 
@@ -554,30 +599,60 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (56, 1),
 (56, 2),
 (72, 1),
+(72, 2),
 (73, 1),
+(73, 2),
 (74, 1),
+(74, 2),
 (75, 1),
+(75, 2),
 (76, 1),
+(76, 2),
 (77, 1),
+(77, 2),
 (78, 1),
+(78, 2),
 (79, 1),
+(79, 2),
 (80, 1),
+(80, 2),
 (81, 1),
+(81, 2),
 (82, 1),
+(82, 2),
 (83, 1),
+(83, 2),
 (84, 1),
+(84, 2),
 (85, 1),
+(85, 2),
 (86, 1),
+(86, 2),
 (87, 1),
+(87, 2),
 (88, 1),
+(88, 2),
 (89, 1),
+(89, 2),
 (90, 1),
+(90, 2),
 (91, 1),
+(91, 2),
 (92, 1),
+(92, 2),
 (93, 1),
+(93, 2),
 (94, 1),
+(94, 2),
 (95, 1),
-(96, 1);
+(95, 2),
+(96, 1),
+(96, 2),
+(117, 1),
+(118, 1),
+(119, 1),
+(120, 1),
+(121, 1);
 
 -- --------------------------------------------------------
 
@@ -600,7 +675,33 @@ INSERT INTO `postes` (`id`, `nom`, `created_at`, `updated_at`) VALUES
 (2, 'DEFENSEUR', '2019-10-25 12:38:06', '2019-10-25 12:38:06'),
 (3, 'ATTAQUANT', '2019-10-25 12:38:14', '2019-10-25 12:38:14'),
 (4, 'GARDIEN', '2019-10-25 12:39:03', '2019-10-25 12:39:03'),
-(5, 'MILIEU', '2019-10-25 12:39:45', '2019-10-25 12:39:45');
+(5, 'MILIEU', '2019-10-25 12:39:00', '2019-11-03 19:32:28');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `prochrencontres`
+--
+
+CREATE TABLE `prochrencontres` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `logodom` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `logoext` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `date` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `heure` time DEFAULT NULL,
+  `stade` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `ville` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `codepostal` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Déchargement des données de la table `prochrencontres`
+--
+
+INSERT INTO `prochrencontres` (`id`, `logodom`, `logoext`, `date`, `heure`, `stade`, `ville`, `codepostal`, `created_at`, `updated_at`) VALUES
+(1, 'prochrencontres\\November2019\\vITQxWn21qrlXYC5ALGX.png', 'prochrencontres\\October2019\\ykyxbpO7CX4PYiFUTFNB.png', 'Samedi 02 Novembre 2019', '15:00:00', 'Stade Michel Hidalgo', 'Sausset-Les-Pins', '13960', '2019-10-31 16:04:00', '2019-11-01 15:07:55');
 
 -- --------------------------------------------------------
 
@@ -846,6 +947,12 @@ ALTER TABLE `postes`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Index pour la table `prochrencontres`
+--
+ALTER TABLE `prochrencontres`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Index pour la table `roles`
 --
 ALTER TABLE `roles`
@@ -890,25 +997,25 @@ ALTER TABLE `user_roles`
 -- AUTO_INCREMENT pour la table `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT pour la table `data_rows`
 --
 ALTER TABLE `data_rows`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=121;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;
 
 --
 -- AUTO_INCREMENT pour la table `data_types`
 --
 ALTER TABLE `data_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT pour la table `entraineurs`
 --
 ALTER TABLE `entraineurs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT pour la table `equipes`
@@ -926,7 +1033,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT pour la table `joueurs`
 --
 ALTER TABLE `joueurs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT pour la table `menus`
@@ -938,7 +1045,7 @@ ALTER TABLE `menus`
 -- AUTO_INCREMENT pour la table `menu_items`
 --
 ALTER TABLE `menu_items`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT pour la table `migrations`
@@ -950,13 +1057,19 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT pour la table `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=97;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=122;
 
 --
 -- AUTO_INCREMENT pour la table `postes`
 --
 ALTER TABLE `postes`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT pour la table `prochrencontres`
+--
+ALTER TABLE `prochrencontres`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT pour la table `roles`
