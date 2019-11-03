@@ -55,7 +55,7 @@ class HomeController extends Controller
         $equipes = Equipe::all()->where('nom','U19_N');
         $entraineurs = Entraineur::all()->where('equipe','U19_N');
         $articles = Article::where('equipe','U19_N')->paginate(10);
-        return view('U19',compact('equipes','attaquants','defenseurs','gardiens','milieux','joueurs','articles','entraineurs'));
+        return view('U19',compact('equipes','attaquants','defenseurs','gardiens','milieux','articles','entraineurs'));
     }
     public function U18()
     {
@@ -66,7 +66,7 @@ class HomeController extends Controller
         $equipes = Equipe::all()->where('nom','U18_R2');
         $entraineurs = Entraineur::all()->where('equipe','U18_R2');
         $articles = Article::where('equipe','U18_R2')->paginate(10);
-        return view('U18',compact('equipes','attaquants','defenseurs','gardiens','milieux','joueurs','articles','entraineurs'));
+        return view('U18',compact('equipes','attaquants','defenseurs','gardiens','milieux','articles','entraineurs'));
     }
     public function U17()
     {
@@ -77,7 +77,7 @@ class HomeController extends Controller
         $equipes = Equipe::all()->where('nom','U17_N');
         $entraineurs = Entraineur::all()->where('equipe','U17_N');
         $articles = Article::where('equipe','U17_N')->paginate(10);
-        return view('U17',compact('equipes','attaquants','defenseurs','gardiens','milieux','joueurs','articles','entraineurs'));
+        return view('U17',compact('equipes','attaquants','defenseurs','gardiens','milieux','articles','entraineurs'));
     }
     public function U16_R2()
     {
