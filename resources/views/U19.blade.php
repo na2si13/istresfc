@@ -167,13 +167,13 @@
                               </div>
 
                               <div class="col-12 row mx-auto justify-content-around">   
-                              @foreach($millieux as $millieu)
+                              @foreach($milieux as $milieu)
                               <div class="card bgColorViolet colorJaune CouleurArticle col-lg-2 col-md-4 col-10 mt-4 ml-2">
-                                  <img src="storage/{{ $millieu->photo }}" class="card-img mt-3 imgJoueur" alt="...">
-                                  <p class="m-0">{{ $millieu->nom }}<br>
-                                  {{ $millieu->prenom }}<hr class="m-0 bgColorYellow">
-                                  {{ $millieu->poste}}<br>
-                                  {{ $millieu->annee }}</p>
+                                  <img src="storage/{{ $milieu->photo }}" class="card-img mt-3 imgJoueur" alt="...">
+                                  <p class="m-0">{{ $milieu->nom }}<br>
+                                  {{ $milieu->prenom }}<hr class="m-0 bgColorYellow">
+                                  {{ $milieu->poste}}<br>
+                                  {{ $milieu->annee }}</p>
                                 </div>
                               @endforeach
                               </div>

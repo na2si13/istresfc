@@ -39,45 +39,45 @@ class HomeController extends Controller
     {
         $attaquants = Joueur::all()->where('equipe','National_3')->where('poste','ATTAQUANT');
         $defenseurs = Joueur::all()->where('equipe','National_3')->where('poste','DEFENSEUR');
-        $millieux = Joueur::all()->where('equipe','National_3')->where('poste','MILLIEU');
+        $milieux = Joueur::all()->where('equipe','National_3')->where('poste','MILIEU');
         $gardiens = Joueur::all()->where('equipe','National_3')->where('poste','GARDIEN');
         $equipes = Equipe::all()->where('nom','National_3');
         $entraineurs = Entraineur::all()->where('equipe','National_3');
         $articles = Article::where('equipe','National_3')->paginate(10);
-        return view('national3',compact('equipes','attaquants','defenseurs','gardiens','millieux','articles','entraineurs'));
+        return view('national3',compact('equipes','attaquants','defenseurs','gardiens','milieux','articles','entraineurs'));
     } 
     public function U19()
     {
         $attaquants = Joueur::all()->where('equipe','U19_N')->where('poste','ATTAQUANT');
         $defenseurs = Joueur::all()->where('equipe','U19_N')->where('poste','DEFENSEUR');
-        $millieux = Joueur::all()->where('equipe','U19_N')->where('poste','MILLIEU');
+        $milieux = Joueur::all()->where('equipe','U19_N')->where('poste','MILIEU');
         $gardiens = Joueur::all()->where('equipe','U19_N')->where('poste','GARDIEN');
         $equipes = Equipe::all()->where('nom','U19_N');
         $entraineurs = Entraineur::all()->where('equipe','U19_N');
         $articles = Article::where('equipe','U19_N')->paginate(10);
-        return view('U19',compact('equipes','attaquants','defenseurs','gardiens','millieux','joueurs','articles','entraineurs'));
+        return view('U19',compact('equipes','attaquants','defenseurs','gardiens','milieux','joueurs','articles','entraineurs'));
     }
     public function U18()
     {
         $attaquants = Joueur::all()->where('equipe','U18_R2')->where('poste','ATTAQUANT');
         $defenseurs = Joueur::all()->where('equipe','U18_R2')->where('poste','DEFENSEUR');
-        $millieux = Joueur::all()->where('equipe','U18_R2')->where('poste','MILLIEU');
+        $milieux = Joueur::all()->where('equipe','U18_R2')->where('poste','MILIEU');
         $gardiens = Joueur::all()->where('equipe','U18_R2')->where('poste','GARDIEN');
         $equipes = Equipe::all()->where('nom','U18_R2');
         $entraineurs = Entraineur::all()->where('equipe','U18_R2');
         $articles = Article::where('equipe','U18_R2')->paginate(10);
-        return view('U18',compact('equipes','attaquants','defenseurs','gardiens','millieux','joueurs','articles','entraineurs'));
+        return view('U18',compact('equipes','attaquants','defenseurs','gardiens','milieux','joueurs','articles','entraineurs'));
     }
     public function U17()
     {
         $attaquants = Joueur::all()->where('equipe','U17_N')->where('poste','ATTAQUANT');
         $defenseurs = Joueur::all()->where('equipe','U17_N')->where('poste','DEFENSEUR');
-        $millieux = Joueur::all()->where('equipe','U17_N')->where('poste','MILLIEU');
+        $milieux = Joueur::all()->where('equipe','U17_N')->where('poste','MILIEU');
         $gardiens = Joueur::all()->where('equipe','U17_N')->where('poste','GARDIEN');
         $equipes = Equipe::all()->where('nom','U17_N');
         $entraineurs = Entraineur::all()->where('equipe','U17_N');
         $articles = Article::where('equipe','U17_N')->paginate(10);
-        return view('U17',compact('equipes','attaquants','defenseurs','gardiens','millieux','joueurs','articles','entraineurs'));
+        return view('U17',compact('equipes','attaquants','defenseurs','gardiens','milieux','joueurs','articles','entraineurs'));
     }
     public function U16_R2()
     {
