@@ -395,7 +395,7 @@
             </div>
             <div class="col-4 col-lg-2 col-md-3 mx-auto">
               <div class="card mb-2">
-                <img class="card-img-top" src="./img/logoKalenji.jpg"
+                <img class="card-img-top" src="./img/logoKipsta.png"
                   alt="Card image cap">
               </div>
             </div>

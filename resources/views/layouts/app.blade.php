@@ -117,16 +117,12 @@
 <!-- SECTION RAPPEL DES PAGES DU SITE AVEC LOGO DU CLUB-->
             
             <section class="text-center col-sm-12 col-md-12 col-lg-4">
-                <ul class="list-group list-group-horizontal">
-                    <li class="list-group-item col-6 mt-2 bgTransparent"><a class="colorViolet" href="{{ route('national3') }}">Les Equipes</li></a>
-                    <li class="list-group-item col-6 mt-2 bgTransparent"><a class="colorViolet" href="">Classement</li></a>
+                <ul class="list-group list-group-horizontal mt-5">
+                    <li class="list-group-item col-6 mt-2 bgTransparent"><a class="colorViolet" href="{{ route('national3') }}">National 3</li></a>
+                    <li class="list-group-item col-6 mt-2 bgTransparent"><a class="colorViolet" href="">??? ??? ???</li></a>
                 </ul>
                 <ul class="list-group list-group-horizontal">
                     <li class="list-group-item col-6 mt-2 bgTransparent"><a class="colorViolet" href="{{ route('pageContact') }}">Nous Contacter</li></a>
-                    <li class="list-group-item col-6 mt-2 bgTransparent"><a class="colorViolet" href="">Calendrier</li></a>
-                </ul>
-                <ul class="list-group list-group-horizontal">
-                    <li class="list-group-item col-6 mt-2 bgTransparent"><a class="colorViolet" href="">Portfolio</li></a>
                     <li class="list-group-item col-6 mt-2 bgTransparent"><a class="colorViolet" href="">Mention Légal</li></a>
                 </ul>
                 <i class="fab fa-facebook-square mt-5 mx-auto col-12 text-center"><a href=""> Suivez notre passion sur Facebook</a></i>

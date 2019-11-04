@@ -28,6 +28,8 @@ class HomeController extends Controller
      */
     public function index()
     {
+        
+        // $articles = Article::where('equipe','National_3');
         $prochrencontres = Prochrencontre::all();
         return view('index',compact('prochrencontres'));
     }
@@ -37,6 +39,7 @@ class HomeController extends Controller
      }
     public function national3()
     {
+        
         $attaquants = Joueur::all()->where('equipe','National_3')->where('poste','ATTAQUANT');
         $defenseurs = Joueur::all()->where('equipe','National_3')->where('poste','DEFENSEUR');
         $milieux = Joueur::all()->where('equipe','National_3')->where('poste','MILIEU');
