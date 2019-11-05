@@ -86,7 +86,7 @@
         <div id="content">
             <div class=" bgColorViolet barHeader">
                     <div class="col-5 mx-auto text-center">
-              <img class="logoNav col-sm-5 col-md-6 col-lg-6" src="{{ asset('img/NAV1logoistresfc.png') }}" alt="logo du Club">
+                    <a href="{{ route('index') }}"><img class="logoNav col-sm-5 col-md-6 col-lg-6" src="{{ asset('img/NAV1logoistresfc.png') }}" alt="logo du Club"></a>
             </div>
             <button type="button" id="sidebarCollapse" class="btn btn-light bgColorViolet bgColorGris btnMenu">
                         <i class="fas fa-align-left"></i>

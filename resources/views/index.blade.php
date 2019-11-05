@@ -8,7 +8,6 @@
 
     <!-- CSS ANIMATION AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
     <!-- FONTS FAMILY -->
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
     <!-- MON CSS -->
@@ -86,7 +85,7 @@
         <div id="content">
             <div class=" bgColorViolet barHeader">
                     <div class="col-5 mx-auto text-center">
-              <img class="logoNav col-sm-5 col-md-6 col-lg-6" src="{{ asset('img/NAV1logoistresfc.png') }}" alt="logo du Club">
+              <a href="{{ route('index') }}"><img class="logoNav col-sm-5 col-md-6 col-lg-6" src="{{ asset('img/NAV1logoistresfc.png') }}" alt="logo du Club"></a>
             </div>
             <button type="button" id="sidebarCollapse" class="btn btn-light bgColorViolet bgColorGris btnMenu">
                         <i class="fas fa-align-left"></i>
@@ -226,36 +225,22 @@
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                    <!-- CARTE EN CAROUSEL -->
-                  <div class="carousel-item active">
+                    <!-- INCREMENTATION POUR ENVOYER LES 3 DERNIER DES ARTICLES DE LEQUIPE NATIONAL3 -->
+                   {{$i = 0}}
+                   @foreach( $articles as $article)
+                   
+                    <div class="carousel-item {{ ($i == 0)? "active" : "" }}">
                       <div class="card mb-3 bgTransparent borderViolet">
-                          <img src="./img/equipe.jpg" class="card-img-top imgArticle" alt="...">
+                          <img src="storage/{{ $article->photo }}" class="card-img-top imgArticle" alt="...">
                           <div class="card-body text-center colorViolet borderViolet">
-                            <h5 class="card-title">Titre de l'article + l'equipe concerné</h5>
-                            <p class="card-text">Paragraphe de l'article Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, modi recusandae amet neque alias saepe.</p>
-                            <p class="card-text"><small class="text-muted">La date de mise en ligne</small></p>
+                            <h5 class="card-title">{{ substr($article->titre, 0,50) }}</h5>
+                            <p class="card-text">{{ substr($article->texte, 0,150) }} .....</p>
+                            <p class="card-text"><small class="text-muted">{{ $article->created_at }}</small></p>
                           </div>
                       </div>
                   </div>
-                  <div class="carousel-item">
-                      <div class="card mb-3 bgTransparent borderViolet">
-                          <img src="./img/equipe.jpg" class="card-img-top imgArticle" alt="...">
-                          <div class="card-body text-center colorViolet borderViolet">
-                            <h5 class="card-title">Titre de l'article + l'equipe concerné</h5>
-                            <p class="card-text">Paragraphe de l'article Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, modi recusandae amet neque alias saepe.</p>
-                            <p class="card-text"><small class="text-muted">La date de mise en ligne</small></p>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="carousel-item">
-                      <div class="card mb-3 bgTransparent borderViolet ">
-                          <img src="./img/equipe.jpg" class="card-img-top imgArticle" alt="...">
-                          <div class="card-body text-center colorViolet borderViolet">
-                            <h5 class="card-title">Titre de l'article + l'equipe concerné</h5>
-                            <p class="card-text">Paragraphe de l'article Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, modi recusandae amet neque alias saepe.</p>
-                            <p class="card-text"><small class="text-muted">La date de mise en ligne</small></p>
-                          </div>
-                      </div>
-                  </div>
+                  {{ $i++ }}
+                  @endforeach
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -275,37 +260,22 @@
               <hr class="bgColorYellow col-4">
               <div id="carouselExampleControls1" class="carousel slide" data-ride="carousel">
                   <div class="carousel-inner">
-                    <div class="carousel-item active">
+                    <!-- INCREMENTATION POUR ENVOYER LES 3 DERNIER DE TOUT LES ARTICLES-->
+                  {{$e = 0}}
+                   @foreach( $articleAlls as $articleAll)
+                   <div class="carousel-item {{ ($e == 0)? "active" : "" }}">
                       <!-- CARTE EN CAROUSEL -->
                         <div class="card mb-3 bgTransparent borderViolet ">
-                            <img src="./img/equipeU19.jpg" class="card-img-top imgArticle" alt="...">
+                            <img src="storage/{{ $articleAll->photo }}" class="card-img-top imgArticle" alt="...">
                             <div class="card-body text-center colorViolet borderViolet">
-                              <h5 class="card-title">Le Istres FC jouera en U19 National la saison prochaine !</h5>
-                              <p class="card-text">Grâce à sa victoire (7-1) face au FC Martigues dimanche, le Istres FC est sûr de terminer 2e du classement de U19 R1 et d....</p>
-                              <p class="card-text"><small class="text-muted">La date de mise en ligne</small></p>
+                            <h5 class="card-title">{{ substr($articleAll->titre, 0,50) }} .....</h5>
+                            <p class="card-text">{{ substr($articleAll->texte, 0,150) }} .....</p>
+                            <p class="card-text"><small class="text-muted">{{ $articleAll->created_at }}</small></p>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="card mb-3 bgTransparent borderViolet ">
-                            <img src="./img/equipe.jpg" class="card-img-top imgArticle" alt="...">
-                            <div class="card-body text-center colorViolet borderViolet">
-                              <h5 class="card-title">Titre de l'article + l'equipe concerné</h5>
-                              <p class="card-text">Paragraphe de l'article Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, modi recusandae amet neque alias saepe.</p>
-                              <p class="card-text"><small class="text-muted">La date de mise en ligne</small></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="card mb-3 bgTransparent borderViolet ">
-                            <img src="./img/equipe.jpg" class="card-img-top imgArticle" alt="...">
-                            <div class="card-body text-center colorViolet borderViolet">
-                              <h5 class="card-title">Titre de l'article + l'equipe concerné</h5>
-                              <p class="card-text">Paragraphe de l'article Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, modi recusandae amet neque alias saepe.</p>
-                              <p class="card-text"><small class="text-muted">La date de mise en ligne</small></p>
-                            </div>
-                        </div>
-                    </div>
+                    {{ $e++ }}
+                    @endforeach
                   </div>
                   <a class="carousel-control-prev" href="#carouselExampleControls1" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

@@ -166,8 +166,8 @@
                   <div class="card col-lg-5 col-sm-10 col-md-5 mr-2 mx-auto mt-3 mb-3 bgTransparent colorViolet contour bgColorGris" style="width: 18rem;"  data-aos="flip-left">
                     <img src="storage/{{ $article->photo }}" class="card-img-top mt-1 imgArticle" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">{{ $article->titre }}</h5>
-                      <p class="card-text">{{ $article->texte }}</p>
+                    <h5 class="card-title">{{ substr($article->titre, 0,50) }}</h5>
+                    <p class="card-text">{{ substr($article->texte, 0,150) }} .....</p>
                       <a href="./afficheArticle.html" class="btn btn-light btnCouleur">lire l'article</a>
                     </div>
                   </div>

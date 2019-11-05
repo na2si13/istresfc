@@ -28,13 +28,17 @@ class HomeController extends Controller
      */
     public function index()
     {
-        
-        // $articles = Article::where('equipe','National_3');
+        // appelle les 3 dernier articles de tout le club
+        $articleAlls = Article::all()->sortByDesc('id')->take(3);
+        // appelle les 3 dernier articles de l'equipe national3
+        $articles = Article::all()->sortByDesc('id')->where('equipe','National_3')->take(3);
+        // Appelle les information pour la section prochain match
         $prochrencontres = Prochrencontre::all();
-        return view('index',compact('prochrencontres'));
+        return view('index',compact('prochrencontres','articles','articleAlls'));
     }
     public function afficheArticle($id){
-        $article = Article::where('id', $id,'equipe')->firstOrFail();
+        // affiche les articles par rapport a leur id pour afficher l'article sur la views afficheArticle
+        $article = Article::where('id', $id)->firstOrFail();
         return view('afficheArticle', compact('article'));
      }
     public function national3()
