@@ -126,7 +126,7 @@
                         @foreach($entraineurs as $entraineur)
                         <div class="bgColorViolet colorJaune  col-lg-4 col-md-5 mb-2 col-10 mx-auto">
                             <h2>Entraineur</h2>
-                            <img src="storage/{{ $entraineur->photo }}" class="card-img imgJoueur" alt="...">
+                            <img src="storage/{{ $entraineur->photo }}" class="card-img imgJoueur" alt="photo entraineur">
                             <p>{{ $entraineur->nom }}</p><br>
                         </div>
                         @endforeach
@@ -137,7 +137,7 @@
                     <h3>Photo Equipe</h3>
                     <hr class="bgColorYellow col-4 mb-3">
                     @foreach($equipes as $equipe)
-                    <img src="storage/{{ $equipe->photo }}" class="card-img mt-3 col-12" alt="...">
+                    <img src="storage/{{ $equipe->photo }}" class="card-img mt-3 col-12" alt="photo équipe">
                     @endforeach
                 </div>
             </div>
@@ -149,7 +149,7 @@
             <div class="col-12 row mx-auto justify-content-around">
                 @foreach($gardiens as $gardien)
                 <div class="card bgColorViolet colorJaune CouleurArticle col-lg-2 col-md-4 col-10 mt-4 ml-2">
-                    <img src="storage/{{ $gardien->photo }}" class="card-img mt-3 imgJoueur" alt="...">
+                    <img src="storage/{{ $gardien->photo }}" class="card-img mt-3 imgJoueur" alt="photo joueur gardien">
                     <p class="m-0">{{ $gardien->nom }}<br>
                         {{ $gardien->prenom }}
                         <hr class="m-0 bgColorYellow">
@@ -162,7 +162,7 @@
             <div class="col-12 row mx-auto justify-content-around">
                 @foreach($defenseurs as $defenseur)
                 <div class="card bgColorViolet colorJaune CouleurArticle col-lg-2 col-md-4 col-10 mt-4 ml-2">
-                    <img src="storage/{{ $defenseur->photo }}" class="card-img mt-3 imgJoueur" alt="...">
+                    <img src="storage/{{ $defenseur->photo }}" class="card-img mt-3 imgJoueur" alt="photo joueur défenseur">
                     <p class="m-0">{{ $defenseur->nom }}<br>
                         {{ $defenseur->prenom }}
                         <hr class="m-0 bgColorYellow">
@@ -175,7 +175,7 @@
             <div class="col-12 row mx-auto justify-content-around">
                 @foreach($milieux as $milieu)
                 <div class="card bgColorViolet colorJaune CouleurArticle col-lg-2 col-md-4 col-10 mt-4 ml-2">
-                    <img src="storage/{{ $milieu->photo }}" class="card-img mt-3 imgJoueur" alt="...">
+                    <img src="storage/{{ $milieu->photo }}" class="card-img mt-3 imgJoueur" alt="photo joueur milieu">
                     <p class="m-0">{{ $milieu->nom }}<br>
                         {{ $milieu->prenom }}
                         <hr class="m-0 bgColorYellow">
@@ -188,7 +188,7 @@
             <div class="col-12 row mx-auto justify-content-around">
                 @foreach($attaquants as $attaquant)
                 <div class="card bgColorViolet colorJaune CouleurArticle col-lg-2 col-md-4 col-10 mt-4 ml-2">
-                    <img src="storage/{{ $attaquant->photo }}" class="img-fluid card-img mt-3 imgJoueur" alt="...">
+                    <img src="storage/{{ $attaquant->photo }}" class="img-fluid card-img mt-3 imgJoueur" alt="photo joueur attaquant">
                     <p class="m-0">{{ $attaquant->nom }}<br>
                         {{ $attaquant->prenom }}
                         <hr class="m-0 bgColorYellow">
@@ -211,7 +211,7 @@
     @foreach($articles as $article)
     <div class="card col-lg-5 col-sm-10 col-md-5 mr-2 mx-auto mt-3 mb-3 bgTransparent colorViolet contour bgColorGris"
         style="width: 18rem;" data-aos="flip-left">
-        <img src="storage/{{ $article->photo }}" class="card-img-top mt-1 imgArticle" alt="...">
+        <img src="storage/{{ $article->photo }}" class="card-img-top mt-1 imgArticle" alt="image article">
         <div class="card-body">
             <h5 class="card-title">{{ substr($article->titre, 0,50) }}</h5>
             <p class="card-text">{{ substr($article->texte, 0,150) }} .....</p>

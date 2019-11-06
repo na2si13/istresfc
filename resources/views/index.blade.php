@@ -88,7 +88,7 @@
             <div class=" bgColorViolet barHeader">
                 <div class="col-5 mx-auto text-center">
                     <a href="{{ route('index') }}"><img class="logoNav col-sm-5 col-md-6 col-lg-6"
-                            src="{{ asset('img/NAV1logoistresfc.png') }}" alt="logo du Club"></a>
+                            src="{{ asset('img/NAV1logoistresfc.png') }}" alt="logo Istres FC"></a>
                 </div>
                 <button type="button" id="sidebarCollapse" class="btn btn-light bgColorViolet bgColorGris btnMenu">
                     <i class="fas fa-align-left"></i>
@@ -101,7 +101,7 @@
                     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner contour1">
                             <div class="carousel-item active">
-                                <img src="./img/imageAccroche.jpg" class="w-100" alt="...">
+                                <img src="./img/imageAccroche.jpg" class="w-100" alt="Image Accueil">
                             </div>
                         </div>
                     </div>
@@ -242,7 +242,7 @@
                                 <div class="carousel-item {{ ($i == 0)? "active" : "" }}">
                                     <div class="card mb-3 bgTransparent borderViolet">
                                         <img src="storage/{{ $article->photo }}" class="card-img-top imgArticle"
-                                            alt="...">
+                                            alt="image article">
                                         <div class="card-body text-center colorViolet borderViolet">
                                             <h5 class="card-title">{{ substr($article->titre, 0,50) }}</h5>
                                             <p class="card-text">{{ substr($article->texte, 0,150) }} .....</p>
@@ -281,7 +281,7 @@
                                     <!-- CARTE EN CAROUSEL -->
                                     <div class="card mb-3 bgTransparent borderViolet ">
                                         <img src="storage/{{ $articleAll->photo }}" class="card-img-top imgArticle"
-                                            alt="...">
+                                            alt="image Article">
                                         <div class="card-body text-center colorViolet borderViolet">
                                             <h5 class="card-title">{{ substr($articleAll->titre, 0,50) }} .....</h5>
                                             <p class="card-text">{{ substr($articleAll->texte, 0,150) }} .....</p>
@@ -322,28 +322,28 @@
                                 <div class="row">
                                     <div class="col-4 col-lg-2 col-md-3 mx-auto">
                                         <div class="card mb-2">
-                                            <img class="card-img-top" src="./img/logoConseil.jpg" alt="Card image cap">
+                                            <img class="card-img-top" src="./img/logoConseil.jpg" alt="partenaire conseil général">
                                         </div>
                                     </div>
                                     <div class="col-4 col-lg-2 col-md-3 mx-auto">
                                         <div class="card mb-2">
-                                            <img class="card-img-top" src="./img/logoIstres.png" alt="Card image cap">
+                                            <img class="card-img-top" src="./img/logoIstres.png" alt="partenaire ville de Istres">
                                         </div>
                                     </div>
                                     <div class="col-4 col-lg-2 col-md-3 mx-auto">
                                         <div class="card mb-2">
                                             <img class="card-img-top" src="./img/logomiroiterie.png"
-                                                alt="Card image cap">
+                                                alt="partenaire miroiterie Istres">
                                         </div>
                                     </div>
                                     <div class="col-4 col-lg-2 col-md-3 mx-auto">
                                         <div class="card mb-2">
-                                            <img class="card-img-top" src="./img/logoSamalu.jpg" alt="Card image cap">
+                                            <img class="card-img-top" src="./img/logoSamalu.jpg" alt="partenaire SAM alu">
                                         </div>
                                     </div>
                                     <div class="col-4 col-lg-2 col-md-3 mx-auto">
                                         <div class="card mb-2">
-                                            <img class="card-img-top" src="./img/logoEntrepot.jpg" alt="Card image cap">
+                                            <img class="card-img-top" src="./img/logoEntrepot.jpg" alt="partenaire Entrepot Istres">
                                         </div>
                                     </div>
                                 </div>
@@ -355,27 +355,27 @@
                                 <div class="row">
                                     <div class="col-4 col-lg-2 col-md-3 mx-auto">
                                         <div class="card mb-2">
-                                            <img class="card-img-top" src="./img/logoLeclerc.jpg" alt="Card image cap">
+                                            <img class="card-img-top" src="./img/logoLeclerc.jpg" alt="partenaire Leclerc">
                                         </div>
                                     </div>
                                     <div class="col-4 col-lg-2 col-md-3 mx-auto">
                                         <div class="card mb-2">
-                                            <img class="card-img-top" src="./img/logoMistral.jpg" alt="Card image cap">
+                                            <img class="card-img-top" src="./img/logoMistral.jpg" alt="partenaire Mistral">
                                         </div>
                                     </div>
                                     <div class="col-4 col-lg-2 col-md-3 mx-auto">
                                         <div class="card mb-2">
-                                            <img class="card-img-top" src="./img/logoSimc.png" alt="Card image cap">
+                                            <img class="card-img-top" src="./img/logoSimc.png" alt="partenaire SIMC">
                                         </div>
                                     </div>
                                     <div class="col-4 col-lg-2 col-md-3 mx-auto">
                                         <div class="card mb-2">
-                                            <img class="card-img-top" src="./img/logoTaxi.jpg" alt="Card image cap">
+                                            <img class="card-img-top" src="./img/logoTaxi.jpg" alt="partenaire Taxi">
                                         </div>
                                     </div>
                                     <div class="col-4 col-lg-2 col-md-3 mx-auto">
                                         <div class="card mb-2">
-                                            <img class="card-img-top" src="./img/logoKipsta.png" alt="Card image cap">
+                                            <img class="card-img-top" src="./img/logoKipsta.png" alt="partenaire Kispta">
                                         </div>
                                     </div>
                                 </div>

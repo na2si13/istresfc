@@ -6,7 +6,7 @@
             <h1>Articles</h1>
         </div>
         <article class="card bgColorGris contour col-lg-8 col-sm-12 col-md-10 text-center mx-auto">
-            <img src="/storage/{{ $article->photo }}" class="card-img-top mt-2" alt="">
+            <img src="/storage/{{ $article->photo }}" class="card-img-top mt-2" alt="photo de l'article">
             <div class="card-body colorViolet">
                 <h5 class="card-title">{{ $article->titre }}</h5>
                 <p class="card-text">{{ $article->texte }}</p>

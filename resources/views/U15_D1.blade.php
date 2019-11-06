@@ -4,7 +4,7 @@
 
 <!-- SECTION TABLEAU CALENDRIER ET CLASSEMENT -->
 <section class="col-12 text-center contour premierSection" data-aos="fade-up">
-    <h1>Equipe U15 D1</h1>
+    <h1>Equipe U15 Division 1</h1>
     <hr class="bgColorYellow col-4 mb-3">
     <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item col-6 col-lg-4">
@@ -126,7 +126,7 @@
                         @foreach($entraineurs as $entraineur)
                         <div class="bgColorViolet colorJaune  col-lg-4 col-md-5 mb-2 col-10 mx-auto">
                             <h2>Entraineur</h2>
-                            <img src="storage/{{ $entraineur->photo }}" class="card-img imgJoueur" alt="...">
+                            <img src="storage/{{ $entraineur->photo }}" class="card-img imgJoueur" alt="photo entraineur">
                             <p>{{ $entraineur->nom }}</p><br>
                         </div>
                         @endforeach
@@ -137,7 +137,7 @@
                     <h3>Photo Equipe</h3>
                     <hr class="bgColorYellow col-4 mb-3">
                     @foreach($equipes as $equipe)
-                    <img src="storage/{{ $equipe->photo }}" class="card-img mt-3 col-12" alt="...">
+                    <img src="storage/{{ $equipe->photo }}" class="card-img mt-3 col-12" alt="photo équipe">
                     @endforeach
                 </div>
             </div>
@@ -183,7 +183,7 @@
     @foreach($articles as $article)
     <div class="card col-lg-5 col-sm-10 col-md-5 mr-2 mx-auto mt-3 mb-3 bgTransparent colorViolet contour bgColorGris"
         style="width: 18rem;" data-aos="flip-left">
-        <img src="storage/{{ $article->photo }}" class="card-img-top mt-1 imgArticle" alt="...">
+        <img src="storage/{{ $article->photo }}" class="card-img-top mt-1 imgArticle" alt="image article">
         <div class="card-body">
             <h5 class="card-title">{{ substr($article->titre, 0,50) }}</h5>
             <p class="card-text">{{ substr($article->texte, 0,150) }} .....</p>

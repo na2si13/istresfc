@@ -104,11 +104,14 @@ class HomeController extends Controller
     }
     public function reserve_D3()
     {
-        $equipes = Equipe::all()->where('nom','Reserve_D3');
-        $entraineurs = Entraineur::all()->where('equipe','Reserve_D3');
-        $articles = Article::where('equipe','Reserve_D3')->paginate(10);
-        $joueurs = Joueur::all()->where('equipe','Reserve_D3');
-        return view('reserve_D3',compact('equipes','joueurs','articles','entraineurs'));
+        $attaquants = Joueur::all()->where('equipe','reserve_D3')->where('poste','ATTAQUANT');
+        $defenseurs = Joueur::all()->where('equipe','reserve_D3')->where('poste','DEFENSEUR');
+        $milieux = Joueur::all()->where('equipe','reserve_D3')->where('poste','MILIEU');
+        $gardiens = Joueur::all()->where('equipe','reserve_D3')->where('poste','GARDIEN');
+        $equipes = Equipe::all()->where('nom','reserve_D3');
+        $entraineurs = Entraineur::all()->where('equipe','reserve_D3');
+        $articles = Article::where('equipe','reserve_D3')->paginate(10);
+        return view('reserve_D3',compact('equipes','attaquants','defenseurs','gardiens','milieux','articles','entraineurs'));
     }
     public function U15_D1()
     {

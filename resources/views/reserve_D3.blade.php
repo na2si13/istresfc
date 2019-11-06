@@ -146,19 +146,59 @@
             <h2 class="colorViolet">Joueurs</h2>
             <hr class="bgColorYellow col-4 mb-3">
             <div class="col-12 row mx-auto justify-content-around">
-                @foreach($joueurs as $joueur)
+                @foreach($gardiens as $gardien)
                 <div class="card bgColorViolet colorJaune CouleurArticle col-lg-2 col-md-4 col-10 mt-4 ml-2">
-                    <img src="storage/{{ $joueur->photo }}" class="card-img mt-3 imgJoueur" alt="...">
-                    <p class="m-0">{{ $joueur->nom }}<br>
-                        {{ $joueur->prenom }}
+                    <img src="storage/{{ $gardien->photo }}" class="card-img mt-3 imgJoueur" alt="photo joueur gardien">
+                    <p class="m-0">{{ $gardien->nom }}<br>
+                        {{ $gardien->prenom }}
                         <hr class="m-0 bgColorYellow">
-                        {{ $joueur->poste}}<br>
-                        {{ $joueur->annee }}</p>
+                        {{ $gardien->poste}}<br>
+                        {{ $gardien->annee }}</p>
+                </div>
+                @endforeach
+            </div>
+
+            <div class="col-12 row mx-auto justify-content-around">
+                @foreach($defenseurs as $defenseur)
+                <div class="card bgColorViolet colorJaune CouleurArticle col-lg-2 col-md-4 col-10 mt-4 ml-2">
+                    <img src="storage/{{ $defenseur->photo }}" class="card-img mt-3 imgJoueur" alt="photo joueur défenseur">
+                    <p class="m-0">{{ $defenseur->nom }}<br>
+                        {{ $defenseur->prenom }}
+                        <hr class="m-0 bgColorYellow">
+                        {{ $defenseur->poste}}<br>
+                        {{ $defenseur->annee }}</p>
+                </div>
+                @endforeach
+            </div>
+
+            <div class="col-12 row mx-auto justify-content-around">
+                @foreach($milieux as $milieu)
+                <div class="card bgColorViolet colorJaune CouleurArticle col-lg-2 col-md-4 col-10 mt-4 ml-2">
+                    <img src="storage/{{ $milieu->photo }}" class="card-img mt-3 imgJoueur" alt="photo joueur milieu ">
+                    <p class="m-0">{{ $milieu->nom }}<br>
+                        {{ $milieu->prenom }}
+                        <hr class="m-0 bgColorYellow">
+                        {{ $milieu->poste}}<br>
+                        {{ $milieu->annee }}</p>
+                </div>
+                @endforeach
+            </div>
+
+            <div class="col-12 row mx-auto justify-content-around">
+                @foreach($attaquants as $attaquant)
+                <div class="card bgColorViolet colorJaune CouleurArticle col-lg-2 col-md-4 col-10 mt-4 ml-2">
+                    <img src="storage/{{ $attaquant->photo }}" class="img-fluid card-img mt-3 imgJoueur" alt="photo joueur attaquant">
+                    <p class="m-0">{{ $attaquant->nom }}<br>
+                        {{ $attaquant->prenom }}
+                        <hr class="m-0 bgColorYellow">
+                        {{ $attaquant->poste}}<br>
+                        {{ $attaquant->annee }}</p>
                 </div>
                 @endforeach
             </div>
         </div>
-        <!-- ---------------------------------->
+    </div>
+    <!-- ---------------------------------->
 </section>
 <!--  FIN DES SECTIONS CALENDRIER, CLASSEMENTS, EQUIPE------------- -->
 
@@ -169,7 +209,7 @@
     @foreach($articles as $article)
     <div class="card col-lg-5 col-sm-10 col-md-5 mr-2 mx-auto mt-3 mb-3 bgTransparent colorViolet contour bgColorGris"
         style="width: 18rem;" data-aos="flip-left">
-        <img src="storage/{{ $article->photo }}" class="card-img-top mt-1 imgArticle" alt="...">
+        <img src="storage/{{ $article->photo }}" class="card-img-top mt-1 imgArticle" alt="image article">
         <div class="card-body">
             <h5 class="card-title">{{ substr($article->titre, 0,50) }}</h5>
             <p class="card-text">{{ substr($article->texte, 0,150) }} .....</p>

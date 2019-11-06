@@ -67,27 +67,27 @@
                 <div class="row">
                     <div class="col-4 col-lg-2 col-md-3 mx-auto">
                         <div class="card mb-2">
-                            <img class="card-img-top" src="./img/logoConseil.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="./img/logoConseil.jpg" alt="partenaire conseil général">
                         </div>
                     </div>
                     <div class="col-4 col-lg-2 col-md-3 mx-auto">
                         <div class="card mb-2">
-                            <img class="card-img-top" src="./img/logoIstres.png" alt="Card image cap">
+                            <img class="card-img-top" src="./img/logoIstres.png" alt="partenaire ville de Istres">
                         </div>
                     </div>
                     <div class="col-4 col-lg-2 col-md-3 mx-auto">
                         <div class="card mb-2">
-                            <img class="card-img-top" src="./img/logomiroiterie.png" alt="Card image cap">
+                            <img class="card-img-top" src="./img/logomiroiterie.png" alt="partenaire miroiterie Istres">
                         </div>
                     </div>
                     <div class="col-4 col-lg-2 col-md-3 mx-auto">
                         <div class="card mb-2">
-                            <img class="card-img-top" src="./img/logoSamalu.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="./img/logoSamalu.jpg" alt="partenaire SAM alu">
                         </div>
                     </div>
                     <div class="col-4 col-lg-2 col-md-3 mx-auto">
                         <div class="card mb-2">
-                            <img class="card-img-top" src="./img/logoEntrepot.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="./img/logoEntrepot.jpg" alt="partenaire Entrepot Istres">
                         </div>
                     </div>
                 </div>
@@ -99,27 +99,27 @@
                 <div class="row">
                     <div class="col-4 col-lg-2 col-md-3 mx-auto">
                         <div class="card mb-2">
-                            <img class="card-img-top" src="./img/logoLeclerc.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="./img/logoLeclerc.jpg" alt="partenaire Leclerc">
                         </div>
                     </div>
                     <div class="col-4 col-lg-2 col-md-3 mx-auto">
                         <div class="card mb-2">
-                            <img class="card-img-top" src="./img/logoMistral.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="./img/logoMistral.jpg" alt="partenaire Mistral">
                         </div>
                     </div>
                     <div class="col-4 col-lg-2 col-md-3 mx-auto">
                         <div class="card mb-2">
-                            <img class="card-img-top" src="./img/logoSimc.png" alt="Card image cap">
+                            <img class="card-img-top" src="./img/logoSimc.png" alt="partenaire SIMC">
                         </div>
                     </div>
                     <div class="col-4 col-lg-2 col-md-3 mx-auto">
                         <div class="card mb-2">
-                            <img class="card-img-top" src="./img/logoTaxi.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="./img/logoTaxi.jpg" alt="partenaire Taxi">
                         </div>
                     </div>
                     <div class="col-4 col-lg-2 col-md-3 mx-auto">
                         <div class="card mb-2">
-                            <img class="card-img-top" src="./img/logoKipsta.png" alt="Card image cap">
+                            <img class="card-img-top" src="./img/logoKipsta.png" alt="partenaire Kispta">
                         </div>
                     </div>
                 </div>
