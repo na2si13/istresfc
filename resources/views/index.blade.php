@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <meta name="description" content="Site Officiel du Club de Istres. 
+    Articles et informations sur les équipes vous attendent pour etre premier dans l'actualité du club" />
 
     <!-- CSS ANIMATION AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
